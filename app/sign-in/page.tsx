@@ -8,8 +8,8 @@ const SignIn = () => {
     <>
       <div className="flex h-screen w-screen">
         {/* Div Esquerda */}
-        <div className="w-1/2 h-full bg-white text-black p-[40px]">
-        <form className="justify-center gap-5 w-full h-full border border-gray-500/25 flex flex-col items-center">
+        <div className="lg:w-1/2 h-full bg-white text-black p-10">
+          <form className="justify-center gap-5 w-full h-full border border-gray-500/25 flex flex-col items-center">
             Logo
             <h1 className="text-3xl font-medium">Get started with GameTime</h1>
             <p className="text-gray-600">
@@ -26,15 +26,15 @@ const SignIn = () => {
               placeholder="Password"
               type="password"
             />
-            <FormButtonContinue/>
+            <FormButtonContinue />
             <p>OR</p>
-            <FormButtonGoogle/>
+            <FormButtonGoogle />
           </form>
         </div>
 
         {/* Div Direita */}
-        <div className="w-1/2 h-full relative">
-          <Image src="/newBg2.jpg" alt="Pixels" fill className="object-cover" />
+        <div className="relative w-full min-h-screen lg:min-h-full lg:w-1/2 bg-cover">
+          <Image src="/flower.png" alt="Pixels" fill className="object-cover" />
         </div>
       </div>
     </>
