@@ -1,5 +1,7 @@
 import Image from "next/image";
-import Input from "../components/signInForm/Input";
+import Input from "../../components/Input";
+import FormButtonContinue from "@/components/FormButtonContinue";
+import FormButtonGoogle from "@/components/FormButtonsGoogle";
 
 const SignIn = () => {
   return (
@@ -7,12 +9,12 @@ const SignIn = () => {
       <div className="flex h-screen w-screen">
         {/* Div Esquerda */}
         <div className="w-1/2 h-full bg-white text-black p-[40px]">
-          <form className="justify-center gap-5 w-full h-full border border-gray-500/25 flex flex-col items-center">
+        <form className="justify-center gap-5 w-full h-full border border-gray-500/25 flex flex-col items-center">
             Logo
             <h1 className="text-3xl font-medium">Get started with GameTime</h1>
             <p className="text-gray-600">
-              Already have an Account?{" "}
-              <a className="underline cursor-pointer">Log in</a>
+              Don&apos;t have an Account?
+              <a className="underline cursor-pointer">Sign up</a>
             </p>
             <Input
               label="Enter your Email"
@@ -20,23 +22,13 @@ const SignIn = () => {
               type="email"
             />
             <Input
-              label="Enter your password"
+              label="Enter your Password"
               placeholder="Password"
               type="password"
             />
-            <button className="p-2 w-md rounded-md bg-black text-gray-200 cursor-pointer">
-              Continue
-            </button>
+            <FormButtonContinue/>
             <p>OR</p>
-            <button className="p-2 flex items-center justify-center gap-3 border border-gray-300 w-md rounded-sm cursor-pointer">
-              <Image
-                src="/google.png"
-                alt="google symbol"
-                width={20}
-                height={20}
-              ></Image>
-              Continue with Google
-            </button>
+            <FormButtonGoogle/>
           </form>
         </div>
 

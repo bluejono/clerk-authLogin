@@ -1,7 +1,10 @@
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
     <>
-      <h1>Salve</h1>
+      <Header />
+      <p>Página privada incial</p>
     </>
   );
 }
