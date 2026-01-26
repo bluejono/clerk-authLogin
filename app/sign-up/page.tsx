@@ -2,6 +2,7 @@
 import Input from "../../components/Input";
 import FormButtonGoogle from "@/components/FormButtonsGoogle";
 import FormButtonContinue from "@/components/FormButtonContinue";
+import Image from "next/image";
 
 const SignUp = () => {
   return (
@@ -13,8 +14,8 @@ const SignUp = () => {
           Logo
           <h1 className="text-3xl font-medium">Get started with GameTime</h1>
           <p className="text-gray-600">
-            Don&apos;t have an Account?
-            <a className="underline cursor-pointer">Sign up</a>
+            Already have an Account?
+            <a className="underline cursor-pointer">Log In</a>
           </p>
           <Input
             label="Enter your Email"
@@ -34,19 +35,46 @@ const SignUp = () => {
 
       {/* design mobile inteiro + div da imagem desktop "*/}
       <div className="bg-[url('/flower.png')] bg-center bg-cover w-screen h-screen flex items-center justify-center p-5 lg:w-1/2">
-        <div className="w-full h-full flex flex-col rounded-2xl border border-white/20 bg-white/10 shadow-lg backdrop-filter backdrop-blur-md gap-5 justify-center text-center lg:hidden p-5">
+        <div className="w-full max-w-md h-fill flex flex-col rounded-2xl border border-white/20 bg-white/10 shadow-lg backdrop-filter backdrop-blur-md gap-2 justify-center text-center lg:hidden p-5">
           <h2>LOGO</h2>
           <h1 className="text-2xl font-medium">Get started with GameTime</h1>
-          <label className="text-left">
+          <p className="text-black">
+            Already have an Account?
+            <a className="underline cursor-pointer">Log In</a>
+          </p>
+          <label className="text-left ">
             Email
-            <input type="text" className="border w-full border-black" />
+            <input
+              type="text"
+              className="bg-white p-2 border border-transparent rounded-md w-full mt-2"
+            />
           </label>
           <label className="text-left">
             Password
-            <input type="password" className="border w-full border-black" />
+            <input
+              type="text"
+              className="bg-white p-2 border border-transparent rounded-md w-full mt-2"
+            />
           </label>
-          <button type="submit" className="border border-black">
-            Sign up
+          <hr className="my-4" />
+          <button
+            type="submit"
+            className=" border border-transparent bg-black rounded-md text-white p-2"
+          >
+            Continue
+          </button>
+          <p className="text-white">OR</p>
+          <button
+            type="submit"
+            className=" border border-transparent bg-white rounded-md p-2 flex items-center justify-center gap-3"
+          >
+            Sign in with Google
+            <Image
+              src={"/google.png"}
+              alt="google symbol"
+              width={20}
+              height={20}
+            ></Image>
           </button>
         </div>
       </div>
